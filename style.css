@@ -1,0 +1,386 @@
+:root{
+  --verde-claro: #5ce819;
+  --verde-medio: #3dc820;
+  --verde-escuro: #18a828;
+  --fundo: #1c1c1c;
+  --fundo-card: #f4f4f2;
+  --texto-claro: #ffffff;
+  --texto-cinza: #b3b3b3;
+  --texto-escuro: #1c1c1c;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto-claro);
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+
+.cabecalho .logo{
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho .logo img{ height: 28px; width: auto; }
+
+.menu_nav{
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.menu_nav a{
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu_nav a:hover{ color: var(--verde-medio); }
+
+.botao_header{
+  background: var(--verde-medio);
+  color: var(--texto-claro);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background .2s ease;
+}
+
+.botao_header:hover{ background: var(--verde-claro); }
+
+/* ---------- HERO ---------- */
+.secao_hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 0 20px;
+}
+
+.hero_texto h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.hero_texto p{
+  font-size: 14px;
+  color: var(--texto-cinza);
+  margin-bottom: 28px;
+}
+
+.hero_texto p strong{ color: var(--texto-claro); }
+
+.hero_ilustracao{
+  display: flex;
+  justify-content: center;
+}
+
+.hero_ilustracao svg, .hero_ilustracao img{ width: 100%; max-width: 420px; height: auto; display: block; }
+
+.pontos_carrossel{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 0 56px;
+}
+
+.pontos_carrossel span{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4a4a4a;
+}
+
+.pontos_carrossel span.ativo{ background: var(--verde-medio); }
+
+/* ---------- ALGUNS CLIENTES ---------- */
+.secao_clientes{
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.secao_clientes h2{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.lista_clientes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 56px;
+  opacity: .7;
+}
+
+.lista_clientes svg{ height: 28px; width: auto; }
+
+/* ---------- TRANSFORMAMOS PRESENÇA ---------- */
+.secao_servicos{
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.secao_servicos h2{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.grade_cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card_servico{
+  background: var(--fundo-card);
+  color: var(--texto-escuro);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: left;
+  flex: 0 1 calc(33.333% - 16px);
+  min-width: 260px;
+}
+
+.card_servico .icone{
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.card_servico h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card_servico p{
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b6b6b;
+}
+
+/* ---------- QUEM NÃO É VISTO ---------- */
+.secao_destaque_wrap{ padding: 100px 0; }
+
+.secao_destaque{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.destaque_ilustracao{
+  display: flex;
+  justify-content: center;
+}
+
+.destaque_ilustracao svg{ width: 100%; max-width: 320px; height: auto; }
+
+.destaque_texto h2{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.destaque_texto p{
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--texto-cinza);
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+.botao_verde{
+  display: inline-block;
+  background: var(--verde-medio);
+  color: var(--texto-claro);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.botao_verde:hover{
+  background: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+/* ---------- RELATÓRIOS / ESTATÍSTICAS ---------- */
+.secao_stats_wrap{ padding: 60px 0 100px; }
+
+.secao_stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.stats_titulo h2{
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.stats_titulo h2 span{
+  color: var(--verde-claro);
+}
+
+.stats_titulo p{
+  font-size: 13px;
+  color: var(--texto-cinza);
+}
+
+.grade_stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.item_stat{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item_stat .icone_stat{
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.item_stat .valor{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.item_stat .rotulo{
+  font-size: 12px;
+  color: var(--texto-cinza);
+}
+
+/* ---------- RODAPÉ ---------- */
+.rodape{
+  border-top: 1px solid #2e2e2e;
+  padding: 48px 0 32px;
+}
+
+.rodape_grade{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 24px;
+}
+
+.rodape_marca p{
+  font-size: 12px;
+  color: var(--texto-cinza);
+  margin-bottom: 16px;
+}
+
+.rodape_redes{
+  display: flex;
+  gap: 12px;
+}
+
+.rodape_redes a{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+
+.rodape_coluna h4{
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.rodape_coluna a{
+  display: block;
+  font-size: 13px;
+  color: var(--texto-cinza);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.rodape_coluna a:hover{ color: var(--texto-claro); }
+
+.rodape_email form{
+  display: flex;
+  background: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rodape_email input{
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 14px;
+  color: var(--texto-claro);
+  font-size: 13px;
+  outline: none;
+}
+
+.rodape_email button{
+  background: var(--verde-medio);
+  border: none;
+  padding: 0 16px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 860px){
+  .cabecalho{ flex-wrap: wrap; gap: 16px; justify-content: center; }
+  .menu_nav{ order: 3; }
+  .secao_hero{ grid-template-columns: 1fr; text-align: center; }
+  .hero_texto p{ margin-left: auto; margin-right: auto; max-width: 480px; }
+  .lista_clientes{ gap: 32px; }
+  .card_servico{ flex: 1 1 100%; }
+  .secao_destaque{ grid-template-columns: 1fr; text-align: center; }
+  .destaque_texto p{ margin: 0 auto 28px; }
+  .secao_stats{ grid-template-columns: 1fr; }
+  .rodape_grade{ grid-template-columns: 1fr 1fr; }
+}
